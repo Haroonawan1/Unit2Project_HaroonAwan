@@ -1,0 +1,28 @@
+LinearEquation Class
+
+Instance Variables:
+    private int x1 - this variable represents the x coordinate of point 1
+    private int y1 - this variable represents the y coordinate of point 1
+    private int x2 - this variable represents the x coordinate of point 2
+    private int y2 - this variable represents the y coordinate of point 2
+
+Constructor:
+    public LinearEquation(String coordinate1, String coordinate2)
+        The constructor take the two coordinate inputs and split them into 4 integer values which will
+        each be assigned to the correct of the four instance variables
+
+    public double slope()
+        This method will use the four instance variables and use them with the slope formula, the result
+        will then be rounded and returned as a double
+
+    public double yIntercept()
+        This method will run slope() and then algebraically find the y intercept using one of the coordinate
+        points which will then be rounded and returned as the double
+
+    public String getEquation()
+        This method will run slope() and yIntercept(), using the information gotten from those two methods it
+        will create the equation in y = mx + b form
+
+    public double distance()
+        This method will use the four instance variables and will input them into the distance formula, the
+        result will then be rounded and returned as a double
