@@ -28,8 +28,7 @@ public class LinearEquation {
     }
 
     public double distance(){
-        double d =  Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2- y1), 2));
-        return Math.round(d * Math.pow(10, 2))/Math.pow(10,2);
+        return Math.round(Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2- y1), 2)) * Math.pow(10, 2))/Math.pow(10,2);
     }
 
     public String getY(double x){
