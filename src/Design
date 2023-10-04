@@ -5,19 +5,22 @@ Instance Variables:
     private int y1 - this variable represents the y coordinate of point 1
     private int x2 - this variable represents the x coordinate of point 2
     private int y2 - this variable represents the y coordinate of point 2
+    private String p1 - this variable represents the coordinate point 1 as a string
+    private String p2 - this variable represents the coordinate point 2 as a string
 
 Constructor:
     public LinearEquation(String coordinate1, String coordinate2)
         The constructor take the two coordinate inputs and split them into 4 integer values which will
-        each be assigned to the correct of the four instance variables
+        each be assigned to the correct of the four instance variables. It will then save the string version
+        of the points to instance variables for ease of use when printing information.
 
     public double slope()
         This method will use the four instance variables and use them with the slope formula, the result
-        will then be rounded and returned as a double
+        will then be returned as a double
 
     public double yIntercept()
         This method will run slope() and then algebraically find the y intercept using one of the coordinate
-        points which will then be rounded and returned as the double
+        points which will then be returned as a double
 
     public String getEquation()
         This method will run slope() and yIntercept(), using the information gotten from those two methods it
@@ -26,3 +29,22 @@ Constructor:
     public double distance()
         This method will use the four instance variables and will input them into the distance formula, the
         result will then be rounded and returned as a double
+
+    public double getY(double x)
+        This method will input the parameter x into the found equation of the line of the two coordinate points
+        in order to allow the user to find the the corresponding y for x, it will then print the coordinate
+
+    public String toString()
+        This method will print out all the info required by calling the other method when necessary with the use of
+        string concatenation, for example, distance() will be called when printing information about the distance between
+        the points
+
+
+EquationRunner
+Step 1: The user will be welcomed
+Step 2: The user will be prompted to enter 1 coordinate points in (x,y) format using the scanner class
+Step 3: The user will be prompted to enter another coordinate points just like the other
+Step 4: An object of the LinearEquation class will be made with the two coordinate points
+Step 5: Information calculated within the LinearEquation class will be printed using it's toString method
+Step 6: The user will be able to find another coordinate point on the line by entering an x coordinate
+Step 7: The program will say goodbye to the user
