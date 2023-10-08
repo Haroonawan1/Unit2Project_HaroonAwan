@@ -9,17 +9,16 @@ Instance Variables:
 Constructor:
     public LinearEquation(String coordinate1, String coordinate2)
         The constructor take the two coordinate inputs and split them into 4 integer values which will
-        each be assigned to the correct of the four instance variables. It will then save the string version
-        of the points to instance variables for ease of use when printing information.
+        each be assigned to the correct of the four instance variables.
 
 Methods:
     public double slope()
-        This method will use the four instance variables and use them with the slope formula, the result
+        This method will put the four instance variables into the slope formula to get the slope, the result
         will then be returned as a double
 
     public double yIntercept()
-        This method will run slope() and then algebraically find the y intercept using one of the coordinate
-        points which will then be returned as a double
+        This method will run slope() and then find the y intercept using one of the coordinate
+        points in an altered version of the y = mx + b formula, the result will then be returned as a double
 
     public String getEquation()
         This method will run slope() and yIntercept(), using the information gotten from those two methods it
@@ -27,23 +26,24 @@ Methods:
 
     public double distance()
         This method will use the four instance variables and will input them into the distance formula, the
-        result will then be rounded and returned as a double
+        result will be rounded before being returned as a double
 
-    public double getY(double x)
+    public String getY(double x)
         This method will input the parameter x into the found equation of the line of the two coordinate points
-        in order to allow the user to find the the corresponding y for x, it will then print the coordinate
+        in order to allow the user to find the the corresponding y for x, it will then return the coordinate point
+        as a string
 
     public String toString()
-        This method will print out all the info required by calling the other method when necessary with the use of
-        string concatenation, for example, distance() will be called when printing information about the distance between
-        the points
+        This method will store all the info required by calling the other methods when necessary with the use of
+        string concatenation, for example, distance() will be called when adding information about the distance between
+        the points. This will be useful when printing the information
 
 
 EquationRunner
-Step 1: The user will be welcomed
-Step 2: The user will be prompted to enter 1 coordinate points in (x,y) format using the scanner class
-Step 3: The user will be prompted to enter another coordinate points just like the other
+Step 1: An object of the Scanner class will be made to get user input
+Step 2: The user will be prompted to enter 1 coordinate points in (x,y) format using the scanner class after being welcomed
+Step 3: The user will be prompted to enter another coordinate point just like the other
 Step 4: An object of the LinearEquation class will be made with the two coordinate points
 Step 5: Information calculated within the LinearEquation class will be printed using it's toString method
-Step 6: The user will be able to find another coordinate point on the line by entering an x coordinate
+Step 6: The user will be prompted to enter a x value and it's corresponding y value will be printed to the user in coordinate form
 Step 7: The program will say goodbye to the user
