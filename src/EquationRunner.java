@@ -12,8 +12,8 @@ public class EquationRunner {
         System.out.println(le);
 
         System.out.print("\nEnter a third x value: ");
-        int xThree = Integer.parseInt(s.nextLine());
-        System.out.println(le.getY(xThree));
+        int x3 = Integer.parseInt(s.nextLine());
+        System.out.println(le.getY(x3));
 
         System.out.println("\nThank you for using me, Goodbye!");
     }
