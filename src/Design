@@ -12,6 +12,7 @@ Constructor:
         each be assigned to the correct of the four instance variables. It will then save the string version
         of the points to instance variables for ease of use when printing information.
 
+Methods:
     public double slope()
         This method will use the four instance variables and use them with the slope formula, the result
         will then be returned as a double
