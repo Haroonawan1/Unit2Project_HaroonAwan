@@ -11,6 +11,10 @@ public class LinearEquation {
         y2 = Integer.parseInt(coordinate2.substring(coordinate2.indexOf(",") + 1, coordinate2.length()-1));
     }
 
+    public double round(double x){
+        return Math.round(x*Math.pow(10, 2))/Math.pow(10,2);
+    }
+
     public double slope(){
         return (double) (y2 - y1) /(x2-x1);
     }
@@ -20,20 +24,20 @@ public class LinearEquation {
     }
 
     public String getEquation(){
-        return "y = " + slope() + "x + " + yIntercept();
+        return "y = " + round(slope()) + "x + " + round(yIntercept());
     }
 
     public double distance(){
-        return Math.round((Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2- y1), 2))) * Math.pow(10, 2))/Math.pow(10,2);
+        return round(Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2- y1), 2)));
     }
 
     public String getY(double x){
-        return "Solved coordinate is: (" + x + "," + ((slope() * x) + yIntercept()) + ")";
+        return "Solved coordinate is: (" + x + "," + (round((slope() * x) + yIntercept())) + ")";
     }
 
     public String toString(){
         String str = "\nFirst Pair: (" + x1 + "," + y1 + ")\nSecond Pair: (" + x2 + "," + y2 + ")";
-        str += "\nSlope of the line: " + slope() + "\nY-Intercept: " + yIntercept();
+        str += "\nSlope of the line: " + round(slope()) + "\nY-Intercept: " + round(yIntercept());
         str += "\nSlope Intercept Form: " + getEquation() + "\nDistance between points: " + distance();
         return str;
     }

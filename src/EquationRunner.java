@@ -12,7 +12,7 @@ public class EquationRunner {
         System.out.println(le);
 
         System.out.print("\nEnter a third x value: ");
-        int x3 = Integer.parseInt(s.nextLine());
+        double x3 = Double.parseDouble(s.nextLine());
         System.out.println(le.getY(x3));
 
         System.out.println("\nThank you for using me, Goodbye!");

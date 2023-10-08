@@ -12,6 +12,9 @@ Constructor:
         each be assigned to the correct of the four instance variables.
 
 Methods:
+    public double round(double x)
+        This method will take a decimal such as x.xxxxx and return x.xx
+
     public double slope()
         This method will put the four instance variables into the slope formula to get the slope, the result
         will then be returned as a double
@@ -21,8 +24,8 @@ Methods:
         points in an altered version of the y = mx + b formula, the result will then be returned as a double
 
     public String getEquation()
-        This method will run slope() and yIntercept(), using the information gotten from those two methods it
-        will create the equation in y = mx + b form
+        This method will run slope() and yIntercept(), round the results, and then using the information gotten from
+        those two methods it will create the equation in y = mx + b form
 
     public double distance()
         This method will use the four instance variables and will input them into the distance formula, the
@@ -31,11 +34,11 @@ Methods:
     public String getY(double x)
         This method will input the parameter x into the found equation of the line of the two coordinate points
         in order to allow the user to find the the corresponding y for x, it will then return the coordinate point
-        as a string
+        as a string with a rounded value of y
 
     public String toString()
         This method will store all the info required by calling the other methods when necessary with the use of
-        string concatenation, for example, distance() will be called when adding information about the distance between
+        string concatenation and will round when needed, for example, distance() will be called when adding information about the distance between
         the points. This will be useful when printing the information
 
 
