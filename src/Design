@@ -8,12 +8,12 @@ Instance Variables:
 
 Constructor:
     public LinearEquation(String coordinate1, String coordinate2)
-        The constructor take the two coordinate inputs and split them into 4 integer values which will
+        The constructor take the two inputted coordinate points and splits them into 4 integer values which will
         each be assigned to the correct of the four instance variables.
 
 Methods:
     public double round(double x)
-        This method will take a decimal such as x.xxxxx and return x.xx
+        This method will round and return decimals to the hundredth place
 
     public double slope()
         This method will put the four instance variables into the slope formula to get the slope, the result
@@ -38,8 +38,8 @@ Methods:
 
     public String toString()
         This method will store all the info required by calling the other methods when necessary with the use of
-        string concatenation and will round when needed, for example, distance() will be called when adding information about the distance between
-        the points. This will be useful when printing the information
+        string concatenation and will round when needed, for example, distance() will be called when adding information about the
+        distance between the points. This will be useful when printing the information.
 
 
 EquationRunner
